@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Aeroplane · Phoenix Framework</title>
+    <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
+  </head>
+  <body>
+    <header>
+      <section class="container">
+        <h1 class="logo">A E R O P L A N E</h1>
+      </section>
+    </header>
+
+    <%# preload pictures %>
+    <div class="hidden">
+	    <script type="text/javascript">
+		    <!--//--><![CDATA[//><!--
+			    var images = new Array()
+			    function preload() {
+				    for (i = 0; i < preload.arguments.length; i++) {
+					    images[i] = new Image()
+					    images[i].src = preload.arguments[i]
+				    }
+			    }
+			    preload(
+				    "/images/0.png",
+            "/images/1.png",
+            "/images/2.png",
+            "/images/3.png",
+            "/images/4.png",
+            "/images/5.png",
+            "/images/6.png",
+			    )
+		    //--><!]]>
+	    </script>
+    </div>
+
+
+    <main role="main" class="container">
+      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+      <%= render @view_module, @view_template, assigns %>
+    </main>
+    <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+  </body>
+</html>

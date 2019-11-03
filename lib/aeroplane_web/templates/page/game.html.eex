@@ -1,0 +1,15 @@
+<script>
+    window.gameName = "<%= @name %>";
+    window.userName = "<%= @user%>";
+</script>
+
+<div class="row">
+    <div class="column">
+        <h1 class="logo">Game Room: <%= @name %></h1>
+        <h1 class="logo">Player Name: <%= @user %></h1>
+        <div id="root">
+            React component loading...
+        </div>
+    </div>
+</div>
+

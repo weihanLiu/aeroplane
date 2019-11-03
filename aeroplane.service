@@ -1,0 +1,16 @@
+[Unit]
+Description=Aeroplane Game
+
+[Service]
+Type=simple
+User=aeroplane
+Group=aeroplane
+Restart=on-failure
+Environment=MIX_ENV=prod "PORT=4793"
+Environment=LANG=en_US.UTF-8
+
+WorkingDirectory=/home/aeroplane/aeroplane
+ExecStart=bash /home/aeroplane/aeroplane/start.sh
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="column">
+
+    <h1 class="join">Join a Game</h1>
+
+    <%= form_for @conn, "/game", fn f-> %>
+      <label class="join">Table Name</label>
+      <label> 
+        <%=text_input f, :name, [class: "input_name"]%> 
+      </label>
+      <label class="join">Player Name</label>
+      <label> 
+        <%=text_input f, :user, [class: "input_name"]%> 
+      </label>
+      <p>
+        <%= submit "Join", [class: "join_btn"]%>
+      </p>
+    <% end%>
+  </div>
+</div>
