@@ -6,7 +6,7 @@
     "watch": "webpack --mode development --watch"
   },
   "dependencies": {
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "konva": "^4.0.15",
     "lodash": "^4.17.15",
     "phoenix": "file:../deps/phoenix",
